@@ -45,7 +45,7 @@ export const mockData = [
     id: "4",
     imageUrl: product4,
     props: ["Tradicional", "Gelado"],
-    name: "Expresso Tradicional",
+    name: "Expresso Gelado",
     description: "Bebida preparada com café expresso e cubos de gelo",
     price: 9.9,
     quantity: 0,
