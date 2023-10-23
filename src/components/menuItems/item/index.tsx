@@ -4,7 +4,19 @@ import { useTheme } from "styled-components";
 import { ItemsModel } from "../../../models/ItemsModel";
 import { BuyButton, ItemName, ItemPropsContainer, MenuItemsContent, MenuItemsForm } from "./styles";
 
-export const MenuItem = ({ imageUrl, props, name, description, price, quantity }: ItemsModel) => {
+interface MenuItemProps extends ItemsModel {
+  onClick: () => void;
+}
+
+export const MenuItem = ({
+  imageUrl,
+  props,
+  name,
+  description,
+  price,
+  quantity,
+  onClick,
+}: MenuItemProps) => {
   const { "gray-100": iconColor } = useTheme();
 
   return (
@@ -26,7 +38,7 @@ export const MenuItem = ({ imageUrl, props, name, description, price, quantity }
           <input type="number" id="number" defaultValue={quantity} />
           <button type="button">+</button>
         </MenuItemsForm>
-        <BuyButton>
+        <BuyButton onClick={() => onClick()}>
           <ShoppingCart size={22} weight="fill" color={iconColor} />
         </BuyButton>
       </div>

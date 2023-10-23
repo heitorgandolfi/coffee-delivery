@@ -1,8 +1,18 @@
 import { mockData } from "../../data/mock/products";
-import { MenuItem } from "./item";
+
 import { MenuItemsContainer, SectionTitle, MenuItemsWrapper } from "./styles";
+import { MenuItem } from "./item";
+import { AddToCartUseCase } from "../../useCases/addToCartUseCase";
 
 export const MenuItems = () => {
+  // const totalCartValue = listOfProducts.reduce((acc, item) => {
+  //   return acc + item.price;
+  // }, 0); // Adicionar o valor total tb na Store.
+
+  const handleClick = (productId: string) => {
+    AddToCartUseCase.execute(productId);
+  };
+
   return (
     <MenuItemsContainer>
       <SectionTitle>Nossos cafés</SectionTitle>
@@ -18,6 +28,7 @@ export const MenuItems = () => {
             description={item.description}
             price={parseFloat(item.price.toFixed(2))}
             quantity={item.quantity}
+            onClick={() => handleClick(item.id)}
           />
         ))}
       </MenuItemsWrapper>
