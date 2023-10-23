@@ -21,7 +21,7 @@ export const Header = () => {
             <h5>Ribeirão Preto, SP</h5>
           </LocalizationWrapper>
 
-          <ShoppingCartIconWrapper>
+          <ShoppingCartIconWrapper to="/order">
             <ShoppingCartIcon weight="fill" />
           </ShoppingCartIconWrapper>
         </div>

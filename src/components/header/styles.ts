@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { NavLink } from "react-router-dom";
 
 export const HeaderContainer = styled.header`
   width: 100vw;
@@ -12,14 +13,13 @@ export const HeaderContent = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
-  max-width: 1120px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
 
   div {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
   }
 `;
 
@@ -29,6 +29,7 @@ export const LocalizationWrapper = styled.div`
   align-items: center;
   gap: 0.25rem;
 
+  margin-right: 0.75rem;
   padding: 0.625rem;
   border-radius: 6px;
 
@@ -51,9 +52,9 @@ export const LocalizationIcon = styled(MapPin)`
   color: ${(props) => props.theme.secondary};
 `;
 
-export const ShoppingCartIconWrapper = styled.div`
+export const ShoppingCartIconWrapper = styled(NavLink)`
   cursor: pointer;
-  padding: 0.625rem;
+  padding: 0.5rem;
 
   border-radius: 6px;
   background-color: ${(props) => props.theme["primary-light"]};
