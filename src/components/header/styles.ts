@@ -54,6 +54,7 @@ export const LocalizationIcon = styled(MapPin)`
 
 export const ShoppingCartIconWrapper = styled(NavLink)`
   cursor: pointer;
+  position: relative;
   padding: 0.5rem;
 
   border-radius: 6px;
@@ -61,6 +62,30 @@ export const ShoppingCartIconWrapper = styled(NavLink)`
 
   &:hover {
     opacity: 0.9;
+  }
+
+  div {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 4px;
+    right: -8.3456px;
+    top: -0.5rem;
+
+    font-size: 0.75rem;
+    font-family: "Roboto";
+    font-weight: 700;
+
+    border: 1px solid transparent;
+    border-radius: 9999px;
+
+    color: ${(props) => props.theme["white"]};
+    background-color: ${(props) => props.theme["primary-dark"]};
   }
 `;
 

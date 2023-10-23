@@ -1,3 +1,4 @@
+import { useStore } from "effector-react";
 import CompanyLogo from "../../assets/icons/company-logo.svg";
 
 import {
@@ -8,8 +9,11 @@ import {
   ShoppingCartIcon,
   ShoppingCartIconWrapper,
 } from "./styles";
+import { AddToCartStore } from "../../stores/addToCartStore/addToCartStore";
 
 export const Header = () => {
+  const { orderItems } = useStore(AddToCartStore);
+
   return (
     <HeaderContainer>
       <HeaderContent>
@@ -23,6 +27,7 @@ export const Header = () => {
 
           <ShoppingCartIconWrapper to="/order">
             <ShoppingCartIcon weight="fill" />
+            <div>{orderItems.length}</div>
           </ShoppingCartIconWrapper>
         </div>
       </HeaderContent>
