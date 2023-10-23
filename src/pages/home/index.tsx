@@ -1,3 +1,7 @@
-export const Home = () => {
-  return <h1>Home</h1>;
+import { HighlightArea } from "../../components/highlightArea";
+
+export const HomeScreen = () => {
+  return (
+    <HighlightArea />
+  )
 };
