@@ -12,7 +12,7 @@ import {
 import { useTheme } from "styled-components";
 
 export const HighlightArea = () => {
-  const { "gray-100": iconColor } = useTheme();
+  const { "gray-150": iconColor } = useTheme();
 
   return (
     <HighlightContainer>
