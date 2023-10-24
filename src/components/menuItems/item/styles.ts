@@ -114,18 +114,12 @@ export const MenuItemsForm = styled.form`
   border-radius: 6px;
   background-color: ${({ theme }) => theme["gray-300"]};
 
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  /* -moz-appearance: textfield; */
-
-  input[type="number"] {
+  span {
     max-width: 20px;
     width: 100%;
+
     text-align: center;
+    font-family: "Roboto";
 
     border: 1px solid transparent;
     background-color: transparent;

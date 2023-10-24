@@ -13,6 +13,7 @@ import { AddToCartStore } from "../../stores/addToCartStore/addToCartStore";
 
 export const Header = () => {
   const { orderItems } = useStore(AddToCartStore);
+  const itemsQuantity = orderItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <HeaderContainer>
@@ -27,7 +28,7 @@ export const Header = () => {
 
           <ShoppingCartIconWrapper to="/order">
             <ShoppingCartIcon weight="fill" />
-            <div>{orderItems.length}</div>
+            <div>{itemsQuantity}</div>
           </ShoppingCartIconWrapper>
         </div>
       </HeaderContent>

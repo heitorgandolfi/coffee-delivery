@@ -1,9 +1,9 @@
 import { OrderDetailsValuesContainer, ValuesWrapper } from "./styles";
 
 interface OrderDetailsValuesProps {
-  itemsValue: number;
-  deliveryPrice: number;
-  totalPrice: number;
+  itemsValue: string;
+  deliveryPrice: string;
+  totalPrice: string;
 }
 
 export const OrderDetailsValues = ({ itemsValue, deliveryPrice, totalPrice }: OrderDetailsValuesProps) => {

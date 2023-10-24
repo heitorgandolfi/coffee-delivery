@@ -41,7 +41,7 @@ export const MenuItem = ({
           <button onClick={() => onDecreaseQuantity()} type="button">
             -
           </button>
-          <input type="number" id="number" value={quantity} onChange={(e) => e.target.value} />
+          <span>{quantity}</span>
           <button onClick={() => onIncreaseQuantity()} type="button">
             +
           </button>

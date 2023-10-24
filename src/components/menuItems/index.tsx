@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { mockData } from "../../data/mock/products";
+import { AddToCartUseCase } from "../../useCases/addToCartUseCase";
 
 import { MenuItemsContainer, SectionTitle, MenuItemsWrapper } from "./styles";
 import { MenuItem } from "./item";
-import { AddToCartUseCase } from "../../useCases/addToCartUseCase";
-import { useState } from "react";
 
 export const MenuItems = () => {
   const [productQuantity, setProductQuantity] = useState(0);
