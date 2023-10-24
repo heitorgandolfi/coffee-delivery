@@ -10,7 +10,11 @@ const execute = async (productId: string): Promise<void> => {
   try {
     const selectedProduct = mockData.find((item) => item.id === productId);
 
-    selectedProduct && loadAddToCartDone(selectedProduct);
+    if (selectedProduct && selectedProduct.quantity > 0) {
+      loadAddToCartDone(selectedProduct);
+    } else {
+      alert("Select one item at least");
+    }
   } catch (error) {
     loadAddToCartFail();
     console.log(error);
